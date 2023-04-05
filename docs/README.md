@@ -3,7 +3,11 @@
 ```mermaid
 classDiagram
     class Bolillero{
-        +NroBolilla: int
-        +
+        +Bolillas<list>: int
+        +JugadaAcertada: bool
+        +SacarBolilla()
+        +JugarNVeces()
     }
+    
 ```
+
