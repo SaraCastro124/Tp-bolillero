@@ -3,10 +3,10 @@
 ```mermaid
 classDiagram
     class Bolillero{
-        +Bolillas<list>: int
-        +JugadaAcertada: bool
-        +SacarBolilla()
-        +JugarNVeces()
+        +Bolillas: List~int~
+        +Jugar: int
+        +SacarBolilla() int
+        +JugarNVeces(List~int~. int) 
     }
     
 ```
