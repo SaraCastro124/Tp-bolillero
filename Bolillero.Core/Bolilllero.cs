@@ -13,6 +13,7 @@ public class Bolillero
 
     }
     public void SacarBolilla() { }
+    public void MeterBolilla() { }
     public void JugarNVeces() { }
 
 
