@@ -15,7 +15,7 @@ classDiagram
         +ElegirBolilla(List~int~)
     }
     class JugadaRandom{
-        +NumeroAlAzar: int
+        +NumeroAlAzar() int
         +ElegirBolilla() int
     }
     Bolillero --> IJugada
