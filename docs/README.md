@@ -4,15 +4,15 @@
 classDiagram
     class Bolillero{
         +Bolillas: List~int~
-        +Jugar: int
+        +Jugar(List~int~) bool
         +SacarBolilla() int
-        +MeterBolillas() 
+        +MeterBolillas() int
         +JugarNVeces(List~int~. int) 
     }
     class IJugada{
         <<interface>>
         +NumeroAlAzar: int
-        +ElegirBolilla(List~int~)
+        +ElegirBolilla() int
     }
     class JugadaRandom{
         +NumeroAlAzar() int
