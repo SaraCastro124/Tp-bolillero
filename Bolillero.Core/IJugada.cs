@@ -4,5 +4,7 @@ namespace Bolillero.Core
     {
         void NumeroAlAzar() { }
         void ElegirBolilla() { }
+        void SacarBolilla() { }
+        void MeterBolilla() { }
     }
 }
