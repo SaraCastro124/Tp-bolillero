@@ -3,12 +3,12 @@ public class Bolillero
 {
     public List<int> Bolillas { get; set; }
     public List<int> Afuera { get; set; }
-    public IJugada jugada { get; set; }
+    public IJugada Jugada { get; set; }
     public Bolillero(int Bolillas, int Numeros, int Jugar, IJugada jugada)
     {
         this.Bolillas = new List<int>();
         this.Afuera = new List<int>();
-        this.jugada = jugada;
+        this.Jugada = jugada;
 
 
     }
@@ -22,10 +22,13 @@ public class Bolillero
     }
     public int SacarBolilla()
     {
-        jugada.ElegirBolilla()
+        var bolilla = Jugada.ElegirBolilla(Bolillas);
     }
-    public void MeterBolilla() { }
-    public void JugarNVeces(List<int> JugarNVeces) { }
+    public int MeterBolilla()
+    {
+        var bolilla =
+    }
+    public int JugarNVeces(List<int> JugarNVeces) { }
 
 
 

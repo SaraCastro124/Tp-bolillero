@@ -1,10 +1,7 @@
-namespace Bolillero.Core
+namespace Bolillero.Core;
+
+public interface IJugada
 {
-    public interface IJugada
-    {
-        void NumeroAlAzar() { }
-        void ElegirBolilla() { }
-        void SacarBolilla() { }
-        void MeterBolilla() { }
-    }
+    int ElegirBolilla(List<int> bolillas);
 }
+
