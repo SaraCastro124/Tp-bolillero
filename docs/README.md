@@ -13,7 +13,7 @@ classDiagram
     class IJugada{
         <<interface>>
         +NumeroAlAzar: int
-        +ElegirBolilla() int
+        +ElegirBolillaAleatoria() int
     }
     class JugadaRandom{
         +NumeroAlAzar() int

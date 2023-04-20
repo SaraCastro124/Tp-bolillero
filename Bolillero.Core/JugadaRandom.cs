@@ -2,8 +2,13 @@ namespace Bolillero.Core;
 
 public class JugadaRandom : IJugada
 {
-    public int ElegirBolilla(List<int> bolillas)
+
+    public int ElegirBolillaAleatoria(List<int> bolillas)
     {
-        throw new NotImplementedException();
+        Random random = new Random();
+        int num = random.Next(bolillas.Count);
+        return bolillas[num];
+
     }
+
 }

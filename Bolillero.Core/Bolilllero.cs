@@ -22,7 +22,7 @@ public class Bolillero
     }
     public int SacarBolilla()
     {
-        var bolilla = Jugada.ElegirBolilla(Bolillas);
+        var bolilla = Jugada.ElegirBolillaAleatoria(Bolillas);
     }
     public int MeterBolilla()
     {
