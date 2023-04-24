@@ -16,7 +16,7 @@ public class Bolillero
     {
         for (int i = 0; i < jugada.Count; i++)
         {
-
+            
         }
         return true;
     }
@@ -24,11 +24,15 @@ public class Bolillero
     {
         var bolilla = Jugada.ElegirBolillaAleatoria(Bolillas);
     }
-    public int MeterBolilla()
+    public void MeterBolillas()
     {
-        var bolilla =
+        Bolillas.AddRange(Afuera);
+        Afuera.Clear();
     }
-    public int JugarNVeces(List<int> JugarNVeces) { }
+    public int JugarNVeces(List<int> JugarNVeces)
+    {
+
+    }
 
 
 

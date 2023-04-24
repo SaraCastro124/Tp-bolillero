@@ -6,8 +6,8 @@ classDiagram
         +Bolillas: List~int~
         +Numeros: List~int~
         +Jugar(List~int~) bool
-        +SacarBolilla() int
-        +MeterBolillas() int
+        +SacarBolilla() 
+        +MeterBolillas()
         +JugarNVeces(List~int~. int) 
     }
     class IJugada{
