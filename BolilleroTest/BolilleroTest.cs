@@ -10,6 +10,7 @@ public class BolilleroTest
     [Fact]
     public void SacarBolilla()
     {
-        var bolilla =
+        var bolilla = bolillero.SacarBolilla();
+        Assert.Equal()
     }
 }
