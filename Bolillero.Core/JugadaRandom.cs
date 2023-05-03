@@ -1,4 +1,4 @@
-namespace Bolillero.Core;
+namespace BolilleroCore;
 
 public class JugadaRandom : IJugada
 {

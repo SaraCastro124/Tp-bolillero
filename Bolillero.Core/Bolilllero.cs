@@ -1,24 +1,29 @@
-﻿namespace Bolillero.Core;
+﻿namespace BolilleroCore;
 public class Bolillero
 {
     public List<int> Bolillas { get; set; }
     public List<int> Afuera { get; set; }
     public IJugada Jugada { get; set; }
-    public Bolillero(int Bolillas, int Numeros, int Jugar, IJugada jugada)
+    public Bolillero(int Bolillas, IJugada jugada)
     {
         this.Bolillas = new List<int>();
         this.Afuera = new List<int>();
         this.Jugada = jugada;
+        CrearBolillas(Bolillas);
+    }
 
-
+    private void CrearBolillas(int cantidad)
+    {
+        for (int i = 0; i < cantidad; i++)
+            Bolillas.Add(i);
     }
     public bool Jugar(List<int> jugada)
     {
         for (int i = 0; i < jugada.Count; i++)
         {
-             var bolilla = SacarBolilla();
+            var bolilla = SacarBolilla();
             if (bolilla != jugada[i])
-            return false;
+                return false;
         }
         return true;
     }
@@ -38,9 +43,9 @@ public class Bolillero
     {
         int ganadas = 0;
         for (int i = 0; i < cantidad; i++)
-        {   
+        {
             MeterBolillas();
-            if(Jugar(jugada))
+            if (Jugar(jugada))
             {
                 ganadas++;
             }
