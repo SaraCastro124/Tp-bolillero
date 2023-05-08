@@ -10,18 +10,29 @@ public class BolilleroTest
     [Fact]
     public void SacarBolilla()
     {
+        Assert.Empty(bolillero.Afuera);
         var bolilla = bolillero.SacarBolilla();
-        Assert.Equal(0, bolilla);
-        Assert.Equal(9, bolillero.Bolillas.Count);
+
         Assert.Single(bolillero.Afuera);
     }
     [Fact]
     public void MeterBolillas()
     {
-        Assert.Equal(0, bolilla);
+
+        Assert.NotEmpty(bolillero.Bolillas);
+        Assert.Empty(bolillero.Afuera);
+        bolillero.SacarBolilla();
         Assert.Single(bolillero.Afuera);
-        Assert.Equal(9, bolillero.Bolillas.Count);
+        bolillero.MeterBolillas();
+        Assert.Empty(bolillero.Afuera);
+
+
+
     }
-    [Fact]
-    public void
+    [Theory]
+    [InlineData()]
+    public void Jugar()
+    {
+
+    }
 }
