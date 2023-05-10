@@ -29,10 +29,17 @@ public class BolilleroTest
 
 
     }
-    [Theory]
-    [InlineData()]
+    [Fact]
     public void Jugar()
     {
+        var Victoria = bolillero.Jugar(jugada :new List<int> {0,1,2,3} )
+        Assert.true(Victoria);
+    }
 
+    [Fact]
+    public void Jugar()
+    {
+        var Falla = bolillero.Jugar(Jugada :new List<int> {4,2,1})
+        Assert.false()
     }
 }
