@@ -4,11 +4,13 @@ public class Bolillero
     public List<int> Bolillas { get; set; }
     public List<int> Afuera { get; set; }
     public IJugada Jugada { get; set; }
-    public Bolillero(int Bolillas, IJugada jugada)
+    public IClonable Clonable { get; set; }
+    public Bolillero(int Bolillas, IJugada jugada, IClonable clonable)
     {
         this.Bolillas = new List<int>();
         this.Afuera = new List<int>();
         this.Jugada = jugada;
+        this.Clonable = clonable;
         CrearBolillas(Bolillas);
     }
 
