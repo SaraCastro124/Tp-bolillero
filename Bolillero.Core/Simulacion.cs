@@ -7,6 +7,7 @@ namespace BolilleroCore
             => bolillero.JugarNVeces(jugada, cantidadSim);
 
         public long SimularConHilos(Bolillero bolillero, List<int> jugada, int cantidadSim, int cantidadHilos)
-            => bolillero.JugarNVeces();
+
+
     }
 }
