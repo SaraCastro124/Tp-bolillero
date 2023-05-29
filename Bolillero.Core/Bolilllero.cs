@@ -5,12 +5,17 @@ public class Bolillero
     public List<int> Afuera { get; set; }
     public IJugada Jugada { get; set; }
     public IClonable Clonable { get; set; }
-    public Bolillero(int Bolillas, IJugada jugada, IClonable clonable)
+    private Bolillero(Bolillero original)
+    {
+        Bolillas = new List<int>(original.Bolillas);
+        Afuera = new List<int>(original.Afuera);
+        Jugada = original.Jugada;
+    }
+    public Bolillero(int Bolillas, IJugada jugada)
     {
         this.Bolillas = new List<int>();
         this.Afuera = new List<int>();
         this.Jugada = jugada;
-        this.Clonable = clonable;
         CrearBolillas(Bolillas);
     }
 
@@ -56,7 +61,7 @@ public class Bolillero
 
 
     }
-
+    internal Bolillero Clonar() => new Bolillero(this);
 
 
 
