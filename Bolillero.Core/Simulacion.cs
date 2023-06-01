@@ -12,10 +12,10 @@ namespace BolilleroCore
             for (int i = 0; i < cantidadHilos; i++)
             {
                 var clon = bolillero.Clonar();
-                tareas[i] = Task<long>.Run (() => (long)clon.JugarNVeces(jugada, cantidadSim));
+                tareas[i] = Task<long>.Run(() => (long)clon.JugarNVeces(jugada, cantidadSim));
             }
-            
-
+            Task<long>.WaitAll(tareas);
+            return tareas.Sum(t => t.Result);
         }
 
     }
