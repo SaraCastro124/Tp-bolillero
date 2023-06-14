@@ -14,7 +14,7 @@ public class SimulacionTest
     {
         this._bolillero = new Bolillero(10, new ElegirPrimera());
         this.Simulacion = new Simulacion();
-        _jugada = new List<int>() { 1 };
+        _jugada = new List<int>() {0};
         _cantidadSim = 1;
         _hilos = 2;
     }
@@ -30,7 +30,8 @@ public class SimulacionTest
 
     public void SimularConHilos()
     {
-
+        var gana = Simulacion.SimularConHilos(_bolillero, _jugada, _cantidadSim, _hilos);
+        Assert.Equal(_hilos, gana);
     }
 
 }
