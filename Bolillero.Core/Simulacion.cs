@@ -18,5 +18,10 @@ namespace BolilleroCore
             return tareas.Sum(t => t.Result);
         }
 
+        public async Task<long> SimularConHilosAsync(Bolillero bolillero, List<int> jugada, int cantidadSim, int cantidadHilos)
+        {
+
+        }
+
     }
 }
