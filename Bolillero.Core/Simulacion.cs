@@ -20,7 +20,7 @@ namespace BolilleroCore
 
         public async Task<long> SimularConHilosAsync(Bolillero bolillero, List<int> jugada, int cantidadSim, int cantidadHilos)
         {
-
+            va
         }
 
     }
