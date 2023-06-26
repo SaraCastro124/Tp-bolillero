@@ -35,10 +35,10 @@ public class SimulacionTest
     }
 
     [Fact]
-    public void SimularConHilosAsync()
+    public async Task SimularConHilosAsync()
     {
-        var ganaAsync = Simulacion.SimularConHilosAsync(_bolillero, _jugada, _cantidadSim, _hilos);
-        Assert.Equals(_hilos, _cantidadSim);
+        var ganaAsync = await Simulacion.SimularConHilosAsync(_bolillero, _jugada, _cantidadSim, _hilos);
+        Assert.Equal(_hilos, ganaAsync);
     }
 
 }
