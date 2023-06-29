@@ -30,5 +30,20 @@ namespace BolilleroCore
             return tareasAsync.Sum(t => t.Result);
         }
 
+        public async Task<long> SimularParallelAsync(Bolillero bolillero, List<int> jugada, int cantidadSim, int cantidadHilos)
+        {
+
+            await Task.Run(() =>
+                    Parallel.For(0,
+                                cantidadHilos,
+                                i =>
+                                {
+                                    Resultados[i] =
+                                }
+                );
+
+            );
+        }
+
     }
 }
