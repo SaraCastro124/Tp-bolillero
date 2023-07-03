@@ -40,5 +40,12 @@ public class SimulacionTest
         var ganaAsync = await Simulacion.SimularConHilosAsync(_bolillero, _jugada, _cantidadSim, _hilos);
         Assert.Equal(_hilos, ganaAsync);
     }
+    
+    [Fact]
+    public async Task SimularParallelAsync()
+    {
+        var ParallelAsync = await Simulacion.SimularParallelAsync(_bolillero, _jugada, _cantidadSim, _hilos);
+        Assert.Equal(_hilos, ParallelAsync);
+    }
 
 }
