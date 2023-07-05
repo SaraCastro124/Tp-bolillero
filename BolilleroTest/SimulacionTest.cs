@@ -15,7 +15,7 @@ public class SimulacionTest
         this._bolillero = new Bolillero(10, new ElegirPrimera());
         this.Simulacion = new Simulacion();
         _jugada = new List<int>() { 0 };
-        _cantidadSim = 1;
+        _cantidadSim = 2;
         _hilos = 2;
     }
 
